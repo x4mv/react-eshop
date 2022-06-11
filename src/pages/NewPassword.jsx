@@ -5,7 +5,7 @@ const NewPassword = () => {
 	return (
 		<div className="NewPassword">
 			<div className="NewPassword-container">
-				<img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+				<img src="../assets/logos/Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" className="logo" />
 				<h1 className="title">Create a new password</h1>
 				<p className="subtitle">Enter a new passwrd for yue account</p>
 				<form action="/" className="form">
@@ -21,3 +21,5 @@ const NewPassword = () => {
 }
 
 export default NewPassword;
+
+// ./logos/logo_yard_sale.svg

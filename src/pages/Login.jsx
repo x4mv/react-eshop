@@ -1,11 +1,13 @@
 import React from 'react';
-import '../styles/Login.scss';
+import '@styles/Login.scss';
+
+const logo = '@logos/logo_yard_sale.svg';
 
 const Login = () => {
 	return (
 		<div className="Login">
 			<div className="Login-container">
-				<img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+				<img src={logo} alt="logo" className="logo" />
 				<form action="/" className="form">
 					<label htmlFor="email" className="label">Email address</label>
 					<input type="text" id="email" placeholder="platzi@example.cm" className="input input-email" />
@@ -21,3 +23,5 @@ const Login = () => {
 }
 
 export default Login;
+
+// ./logos/logo_yard_sale.svg

@@ -1,19 +1,31 @@
-import React from "react";
-import '../styles/Header.scss';
+import React, { useState } from "react";
+import Menu from "@components/Menu";
+import '@styles/Header.scss';
+
+import  menu from '@icons/icon_menu.svg';
+import  logo from '@logos/logo_yard_sale.svg';
+import  shoppingCart from '@icons/icon_shopping_cart.svg'
 
 const Header = () => {
+
+  const [ toggle, setToggle] = useState(false)
+
+  const handleToggle = () =>{
+    setToggle(!toggle);
+  }
+
   return (
     <nav>
       <img
-        src="./icons/Platzi_YardSale_Icons/icon_menu.svg"
+        src={menu} // ./icons/Platzi_YardSale_Icons/icon_menu.svg
         alt="menu"
         className="menu"
       />
       <div className="navbar-left">
         <img
-          src="./logos/Platzi_YardSale_Logos/logo_yard_sale.svg"
+          src={logo} //./logos/Platzi_YardSale_Logos/logo_yard_sale.svg
           alt="logo"
-          className="logo"
+          className="nav-logo"
         />
         <ul>
           <li>
@@ -38,16 +50,19 @@ const Header = () => {
       </div>
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email">platzi@example.com</li>
+          <li className="navbar-email" onClick={handleToggle}>
+            platzi@example.com
+          </li>
           <li className="navbar-shopping-cart">
             <img
-              src="./icons/Platzi_YardSale_Icons/icon_shopping_cart.svg"
+              src={shoppingCart} // ./icons/Platzi_YardSale_Icons/icon_shopping_cart.svg
               alt="shopping cart"
             />
             <div>2</div>
           </li>
         </ul>
       </div>
+      {toggle &&  <Menu />}
     </nav>
   );
 };

@@ -1,21 +1,25 @@
 @use './vars';
 
-.Orders {
-	width: 100%;
-	height: 100vh;
+.OrderItem {
 	display: grid;
-	place-items: center;
+	grid-template-columns: auto 1fr auto auto;
+	gap: 16px;
+	margin-bottom: 24px;
+	align-items: center;
 }
-.title {
-	font-size: var(--lg);
-	margin-bottom: 40px;
+.OrderItem figure {
+	margin: 0;
 }
-.Orders-container {
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	width: 300px;
+.OrderItem figure img {
+	width: 70px;
+	height: 70px;
+	border-radius: 20px;
+	object-fit: cover;
 }
-.Orders-content {
-	display: flex;
-	flex-direction: column;
+.OrderItem p:nth-child(2) {
+	color: var(--very-light-pink);
+}
+.OrderItem p:nth-child(3) {
+	font-size: var(--md);
+	font-weight: bold;
 }
